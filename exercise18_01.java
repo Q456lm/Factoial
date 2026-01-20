@@ -10,14 +10,12 @@ import java.util.Scanner;
  * 
  * Example: 100! is a huge number with 158 digits!
  * 
- * @author Your Name
+ * @author Clarence Bunting
  */
-public class Exercise18_01 {
+public class exercise18_01 {
     
     /**
      * Recursive factorial method using BigInteger
-     * 
-     * TODO: Implement this method
      * 
      * Base case: if n equals 0, return 1
      * Recursive case: return n * factorial(n - 1)
@@ -31,13 +29,13 @@ public class Exercise18_01 {
      * @return n! as a BigInteger
      */
     public static BigInteger factorial(BigInteger n) {
-        // TODO: Implement base case
-        
-        
-        // TODO: Implement recursive case
-        
-        
-        return null; // Remove this when you implement the method
+        //Implement base case
+        if (n.equals(BigInteger.ZERO)){
+            return BigInteger.ONE;
+        }
+
+        //Implement recursive case
+        return n.multiply(factorial(n.subtract(BigInteger.ONE)));
     }
     
     public static void main(String[] args) {
